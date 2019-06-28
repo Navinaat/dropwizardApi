@@ -1,4 +1,4 @@
-package com.baskar.dropwizard;
+package com.java.dropwizard;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import io.dropwizard.Configuration;
@@ -11,18 +11,16 @@ import javax.validation.constraints.NotNull;
 public class EmployeeConfiguration extends Configuration {
     @Valid
     @NotNull
-    private DataSourceFactory dataSourceFactory=new DataSourceFactory();
+    private DataSourceFactory dataSourceFactory = new DataSourceFactory();
 
     @JsonProperty("database")
-    public DataSourceFactory getDataSourceFactory()
-    {
+    public DataSourceFactory getDataSourceFactory() {
         return dataSourceFactory;
     }
 
     @JsonProperty("database")
-    public void setDataSourceFactory(DataSourceFactory dataSourceFactory)
-    {
-        this.dataSourceFactory=dataSourceFactory;
+    public void setDataSourceFactory(DataSourceFactory dataSourceFactory) {
+        this.dataSourceFactory = dataSourceFactory;
     }
 
 }

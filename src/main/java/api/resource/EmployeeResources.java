@@ -15,15 +15,15 @@ import javax.ws.rs.core.Response;
 @Produces(MediaType.APPLICATION_JSON)
 public class EmployeeResources {
     private EmployeeService employeeService;
+
     public EmployeeResources(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }
+
     @GET
-    public Response getEmployee()
-    {
+    public Response getEmployee() {
         return Response.ok().entity(this.employeeService.getEmployee()).build();
     }
-
 
 
 }
